@@ -27,7 +27,7 @@
 
     <meta
       name="description"
-      content="Portfolio of Amogh Rathod - DevOps & Cloud Engineer."
+      content="Portfolio of Amogh Rathod - Cloud & DevOps Engineer."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -59,13 +59,12 @@
     <section class="hero">
       <div class="wrapper">
         <p class="hero-intro">Hi, my name is</p>
-        <h1 class="glitch-text">Amogh Rathod.</h1>
+        <h1 class="glitch-text">Amogh Rahul Rathod.</h1>
         <h2>I build things on the Cloud.</h2>
         <p class="hero-desc">
-          I'm a DevOps Engineer specializing in building (and occasionally
-          breaking) exceptional digital experiences. Currently focused on
-          automating infrastructure, CI/CD pipelines, and cloud-native
-          solutions.
+          I'm a Computer Science student and DevOps enthusiast with a passion
+          for container orchestration and backend development. I specialize in
+          building scalable infrastructure using Docker, Kubernetes, and Go.
         </p>
         <a href="#work" class="cta-button">Check out my work</a>
       </div>
@@ -81,30 +80,34 @@
           <article class="featured-card">
             <div class="featured-content">
               <p class="project-overline">Featured Project</p>
-              <h3>Cloud Infrastructure Automation</h3>
+              <h3>AWS Budget-Controlled Deployment</h3>
               <div class="project-desc">
                 <p>
-                  A complete CI/CD pipeline orchestration using Jenkins and
-                  Kubernetes. Automates the deployment of microservices with
-                  zero downtime. Built with Terraform for IaC.
+                  Deployed a containerized web app on AWS EC2 using Docker and
+                  VPCs. Configured Kubernetes to maintain high availability with
+                  automatic load balancing. Implemented AWS Budgets and Systems
+                  Manager to auto-terminate instances at 95% budget usage to
+                  optimize costs.
                 </p>
               </div>
               <ul class="project-tech-list">
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Jenkins</li>
+                <li>AWS EC2 & VPC</li>
+                <li>Docker & Kubernetes</li>
+                <li>NGINX</li>
+                <li>AWS SNS</li>
               </ul>
               <div class="project-links">
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/amoghrrathod" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
               </div>
             </div>
             <div class="featured-image">
               <a href="#"
                 ><img
-                  src="https://dummyimage.com/580x360/112240/64ffda&text=Infrastructure+Diagram"
-                  alt="Featured Project"
+                  src="https://dummyimage.com/580x360/112240/64ffda&text=AWS+Architecture"
+                  alt="AWS Project"
               /></a>
             </div>
           </article>
@@ -116,19 +119,68 @@
             <div class="card-top">
               <i class="far fa-folder folder-icon"></i>
               <div class="card-links">
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/amoghrrathod" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h4>"Guide" Backend Server</h4>
+            <p>
+              Designed an authentication server in Go using REST APIs and JWT
+              verification. Optimized PostgreSQL integration to securely manage
+              user login and registration data.
+            </p>
+            <ul class="card-tech">
+              <li>Go (Golang)</li>
+              <li>PostgreSQL</li>
+              <li>REST APIs</li>
+              <li>JWT</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <i class="far fa-folder folder-icon"></i>
+              <div class="card-links">
+                <a href="https://github.com/amoghrrathod" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
               </div>
             </div>
-            <h4>Serverless API</h4>
+            <h4>Game-Hub Multiplayer</h4>
             <p>
-              Designed a serverless REST API using AWS Lambda and API Gateway to
-              handle high-traffic requests.
+              A multiplayer platform featuring Chess and a Sonic-inspired game.
+              Built with React for dynamic UI and implemented real-time
+              turn-based mechanics.
+            </p>
+            <ul class="card-tech">
+              <li>React.js</li>
+              <li>Kaboom.js</li>
+              <li>WebSockets</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <i class="far fa-folder folder-icon"></i>
+              <div class="card-links">
+                <a href="https://github.com/amoghrrathod" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h4>Raspberry Pi Telegram Bot</h4>
+            <p>
+              A Python-based bot for real-time weather and stock data retrieval.
+              Integrates Open Weather and Alpha Vantage APIs with reliable
+              message parsing.
             </p>
             <ul class="card-tech">
               <li>Python</li>
-              <li>AWS Lambda</li>
-              <li>DynamoDB</li>
+              <li>Raspberry Pi</li>
+              <li>Telegram API</li>
+              <li>JSON</li>
             </ul>
           </article>
 
@@ -136,57 +188,22 @@
             <div class="card-top">
               <i class="far fa-folder folder-icon"></i>
               <div class="card-links">
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/amoghrrathod" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
               </div>
             </div>
-            <h4>Container Orchestrator</h4>
+            <h4>Alertify CLI Tool</h4>
             <p>
-              A lightweight container orchestration tool built from scratch to
-              understand the internals of Docker.
+              Command-line task management tool built in C. Features color-coded
+              statuses, JSON data storage for backups, and Homebrew installation
+              support.
             </p>
             <ul class="card-tech">
-              <li>Go</li>
-              <li>Linux Namespaces</li>
-              <li>Cgroups</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="card-top">
-              <i class="far fa-folder folder-icon"></i>
-              <div class="card-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-            <h4>Log Monitor</h4>
-            <p>
-              Real-time log monitoring dashboard using ELK Stack (Elasticsearch,
-              Logstash, Kibana).
-            </p>
-            <ul class="card-tech">
-              <li>ELK Stack</li>
-              <li>Bash</li>
-              <li>Grafana</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="card-top">
-              <i class="far fa-folder folder-icon"></i>
-              <div class="card-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <h4>Ansible Playbooks</h4>
-            <p>
-              Collection of Ansible playbooks to automate server provisioning
-              and configuration management.
-            </p>
-            <ul class="card-tech">
-              <li>Ansible</li>
-              <li>YAML</li>
-              <li>Vagrant</li>
+              <li>C Language</li>
+              <li>JSON</li>
+              <li>Homebrew</li>
+              <li>CLI</li>
             </ul>
           </article>
         </section>
@@ -201,24 +218,32 @@
               <span class="heading-number">02.</span> About Me
             </h2>
             <p>
-              Hello! I'm Amogh, a DevOps enthusiast who enjoys bridging the gap
-              between development and operations. My interest in cloud computing
-              started when I tried to host a game server and ended up
-              architecting a whole network.
+              Hello! [cite_start]I'm Amogh, a student at PES University [cite:
+              13] [cite_start]passionate about solving real-world problems
+              through Cloud and DevOps[cite: 3]. My journey involves everything
+              from coding in low-level languages like C and Rust to
+              orchestrating containers in the cloud.
             </p>
+            [cite_start]
             <p>
-              Fast-forward to today, and I’ve had the privilege of working on
-              containerization, orchestration, and automating the "boring
-              stuff."
+              I thrive in collaborative teams and have experience with
+              penetration testing projects and cybersecurity challenges[cite: 4,
+              54].
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
             <ul class="skills-list">
-              <li>AWS / Azure</li>
-              <li>Kubernetes</li>
-              <li>Terraform</li>
-              <li>Python (Boto3)</li>
-              <li>Jenkins / GitHub Actions</li>
-              <li>Linux Administration</li>
+              [cite_start]
+              <li>Docker & Kubernetes [cite: 21]</li>
+              [cite_start]
+              <li>AWS (EC2, VPC, IAM) [cite: 44]</li>
+              [cite_start]
+              <li>Go (Golang) [cite: 16]</li>
+              [cite_start]
+              <li>Rust & C++ [cite: 16]</li>
+              [cite_start]
+              <li>Python [cite: 16]</li>
+              [cite_start]
+              <li>React.js & Node.js [cite: 18]</li>
             </ul>
           </article>
 
@@ -239,17 +264,18 @@
         <p class="hero-intro">03. What's Next?</p>
         <h2 class="big-heading">Get In Touch</h2>
         <p class="contact-desc">
-          I'm currently looking for new opportunities in DevOps and Cloud
-          Engineering. Whether you have a question or just want to say hi, my
-          inbox is always open.
+          I'm currently based in Bengaluru and open to new opportunities in
+          Cloud Engineering and DevOps. Whether you have a question or just want
+          to say hi, my inbox is always open.
         </p>
-        <a href="mailto:amogh@example.com" class="cta-button">Say Hello</a>
+        <a href="mailto:amoghrrathod@gmail.com" class="cta-button">Say Hello</a>
 
         <div class="social-links">
-          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/amoghrrathod" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </section>
