@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>AMOGH RATHOD // DEVOPS GOD</title>
+    <title>Amogh Rathod | Cloud Engineering</title>
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -20,217 +20,227 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     />
+
     <link href="styles.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
-    <div class="scanlines"></div>
+    <div class="grid-overlay"></div>
 
-    <div class="marquee-container">
-      <div class="marquee-content">
-        WARNING: DEVOPS ENGINEER // KUBERNETES MASTER // FLIPPER ZERO HACKER //
-        DO NOT TOUCH THE PROD SERVER // WARNING: DEVOPS ENGINEER // KUBERNETES
-        MASTER // FLIPPER ZERO HACKER // DO NOT TOUCH THE PROD SERVER //
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="logo">AMOGH RATHOD</span>
+        <span class="role">[ DEVOPS / CLOUD ]</span>
       </div>
-    </div>
+      <div class="nav-right">
+        <a href="#work">WORK</a>
+        <a href="#about">PROFILE</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
 
-    <header>
-      <div class="wrapper header-flex">
-        <div class="logo-box">
-          <h1>&lt;AMOGH_R/&gt;</h1>
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="headline">
+          RESILIENT <br />
+          INFRASTRUCTURE.
+        </h1>
+        <div class="hero-sub">
+          <p>
+            I engineer scalable cloud systems and automate the complex.
+            Currently optimizing backend architecture and container
+            orchestration.
+          </p>
+          <div class="hero-tech">
+            <span>DOCKER</span>
+            <span>K8S</span>
+            <span>GO</span>
+            <span>RUST</span>
+          </div>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#projects">[PROJECTS]</a></li>
-            <li><a href="#skills">[SKILLS]</a></li>
-            <li><a href="#contact">[CONTACT]</a></li>
-            <li><a href="#" class="blink">_RESUME_DOC</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="wrapper">
-        <div class="glitch-box">
-          <p class="intro">USER: AMOGH RAHUL RATHOD</p>
-          <h1 class="mega-title">CLOUD<br />ORCHESTRATOR</h1>
-          <p class="subtitle">BUILDING INFRASTRUCTURE // BREAKING SECURITY</p>
-          <div class="hero-stats">
-            <span>LOC: BENGALURU</span>
-            <span>CLASS: AIML STUDENT</span>
-            <span>STATUS: ONLINE</span>
+    <main id="work">
+      <div class="section-header">
+        <h2>SELECTED WORKS</h2>
+        <span class="line"></span>
+        <span>01</span>
+      </div>
+
+      <div class="project-list">
+        <article class="project-item">
+          <div class="p-index">01</div>
+          <div class="p-info">
+            <h3>AWS BUDGET CONTROLLER</h3>
+            <p class="p-desc">
+              Containerized deployment on EC2 with Kubernetes.
+              [cite_start]Features an automated "Kill Switch" via AWS Systems
+              Manager to terminate instances at 95% budget usage. [cite: 42, 45,
+              46]
+            </p>
+            <div class="p-tags">
+              <span>AWS VPC</span>
+              <span>Kubernetes</span>
+              <span>Auto-Termination</span>
+            </div>
           </div>
-          <a href="#projects" class="retro-btn">INITIALIZE PROTOCOL -></a>
-        </div>
-      </div>
-    </section>
+          <div class="p-link">
+            <a href="https://github.com/amoghrrathod" target="_blank"
+              ><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
 
-    <div class="marquee-container reverse-scroll">
-      <div class="marquee-content">
-        Docker // Kubernetes // Rust // Go // AWS // Linux // Python // C++ //
-        Docker // Kubernetes // Rust // Go // AWS // Linux // Python // C++ //
-      </div>
-    </div>
-
-    <section id="projects" class="section-block">
-      <div class="wrapper">
-        <h2 class="neon-title">_DEPLOYMENTS_</h2>
-
-        <div class="project-grid">
-          <article class="project-card featured-card">
-            <div class="card-header">
-              <span>★ FEATURED</span>
-              <span>[AWS_EC2]</span>
-            </div>
-            <h3>THE BUDGET KILLER</h3>
-            <p>
-              Deployed a containerized web app on AWS EC2. Configured Kubernetes
-              for high availability. Added a <b>KILL SWITCH</b>: AWS Systems
-              Manager auto-terminates instances if the budget hits 95%. Zero
-              debt.
+        <article class="project-item">
+          <div class="p-index">02</div>
+          <div class="p-info">
+            <h3>GUIDE AUTH SYSTEM</h3>
+            <p class="p-desc">
+              High-performance authentication server built in Go.
+              [cite_start]Implements JWT verification, salted password hashing,
+              and optimized PostgreSQL transactions. [cite: 6, 9, 11]
             </p>
-            <div class="tech-stack">
-              <span>AWS VPC</span><span>DOCKER</span><span>KUBERNETES</span
-              ><span>NGINX</span>
+            <div class="p-tags">
+              <span>Golang</span>
+              <span>PostgreSQL</span>
+              <span>REST API</span>
             </div>
-            <a
-              href="https://github.com/amoghrrathod"
-              target="_blank"
-              class="card-link"
-              >SOURCE CODE >></a
-            >
-          </article>
+          </div>
+          <div class="p-link">
+            <a href="https://github.com/amoghrrathod" target="_blank"
+              ><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
 
-          <article class="project-card">
-            <div class="card-header">
-              <span>ID: 001</span>
-              <span>[GO_LANG]</span>
-            </div>
-            <h3>GUIDE BACKEND</h3>
-            <p>
-              Designed a secure auth server in Go. Salted hashes, JWT
-              verification, and REST APIs. Optimized PostgreSQL for speed.
-            </p>
-            <div class="tech-stack">
-              <span>GO</span><span>POSTGRES</span><span>JWT</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="card-header">
-              <span>ID: 002</span>
-              <span>[REACT]</span>
-            </div>
-            <h3>GAME-HUB ARENA</h3>
-            <p>
-              Multiplayer gaming platform featuring Chess and Sonic. Real-time
-              websockets for instant pvp action.
-            </p>
-            <div class="tech-stack">
-              <span>REACT</span><span>KABOOM.JS</span><span>WEBSOCKETS</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="card-header">
-              <span>ID: 003</span>
-              <span>[C_CLI]</span>
-            </div>
+        <article class="project-item">
+          <div class="p-index">03</div>
+          <div class="p-info">
             <h3>ALERTIFY CLI</h3>
-            <p>
-              Command-line task manager built in C. Color-coded status, JSON
-              backups, Homebrew installable. No GUI bloat.
+            [cite_start]
+            <p class="p-desc">
+              A lightweight task management tool written in C. Features JSON
+              serialization for state management and Homebrew formula for
+              distribution. [cite: 37, 39, 40]
             </p>
-            <div class="tech-stack">
-              <span>C</span><span>JSON</span><span>HOMEBREW</span>
+            <div class="p-tags">
+              <span>C Language</span>
+              <span>CLI</span>
+              <span>Homebrew</span>
             </div>
-          </article>
+          </div>
+          <div class="p-link">
+            <a href="https://github.com/amoghrrathod" target="_blank"
+              ><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
 
-          <article class="project-card">
-            <div class="card-header">
-              <span>ID: 004</span>
-              <span>[IOT]</span>
+        <article class="project-item">
+          <div class="p-index">04</div>
+          <div class="p-info">
+            <h3>GAME-HUB MULTIPLAYER</h3>
+            <p class="p-desc">
+              Real-time gaming platform with WebSocket integration.
+              [cite_start]Includes a custom Chess engine and Sonic-inspired
+              arcade mechanics using Kaboom.js. [cite: 33, 35, 36]
+            </p>
+            <div class="p-tags">
+              <span>React</span>
+              <span>WebSockets</span>
+              <span>Game Dev</span>
             </div>
+          </div>
+          <div class="p-link">
+            <a href="https://github.com/amoghrrathod" target="_blank"
+              ><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="p-index">05</div>
+          <div class="p-info">
             <h3>PI INTEL BOT</h3>
-            <p>
-              Telegram bot hosted on a Raspberry Pi. Pulls live stock & weather
-              data via APIs and pipes it to your phone.
+            <p class="p-desc">
+              Hardware-integrated Telegram bot running on Raspberry Pi.
+              [cite_start]Aggregates real-time financial and meteorological data
+              via external APIs. [cite: 47, 49, 50]
             </p>
-            <div class="tech-stack">
-              <span>PYTHON</span><span>RPI</span><span>TELEGRAM API</span>
+            <div class="p-tags">
+              <span>Python</span>
+              <span>Raspberry Pi</span>
+              <span>APIs</span>
             </div>
-          </article>
-
-          <article class="project-card">
-            <div class="card-header">
-              <span>ID: 005</span>
-              <span>[GAME]</span>
-            </div>
-            <h3>BREAKOUT ARCADE</h3>
-            <p>
-              Modernized Breakout-style arcade game using Python. Optimized
-              sprite rendering and physics logic.
-            </p>
-            <div class="tech-stack">
-              <span>PYTHON</span><span>SPRITES</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section-block invert-colors">
-      <div class="wrapper">
-        <h2 class="neon-title">_THE_LORE_</h2>
-        <div class="lore-container">
-          <div class="lore-text">
-            <p>> INITIALIZING BIO...</p>
-            <p>> SUBJECT: Amogh Rathod.</p>
-            <p>> MISSION: Cloud & DevOps.</p>
-            <p>
-              > BACKGROUND: I don't just write code; I orchestrate it. Ranked
-              <b>31st Nationally</b> in the NITK Code-Red CTF
-              (Cybersecurity/Hacking). I hold certifications in AWS and CCNA.
-            </p>
-            <p>> HARDWARE: Raspberry Pi, Flipper Zero, Arduino Robotics.</p>
-            <br />
-            <p class="blink">>> SYSTEM READY.</p>
           </div>
-          <div class="skill-cloud">
-            <span>DOCKER</span>
-            <span>KUBERNETES</span>
-            <span>RUST</span>
-            <span>GO</span>
-            <span>AWS VPC</span>
-            <span>LINUX</span>
-            <span>PYTHON</span>
-            <span>C++</span>
-            <span>PEN-TESTING</span>
+          <div class="p-link">
+            <a href="https://github.com/amoghrrathod" target="_blank"
+              ><i class="fas fa-arrow-right"></i
+            ></a>
           </div>
+        </article>
+      </div>
+    </main>
+
+    <section id="about" class="about-section">
+      <div class="section-header">
+        <h2>TECHNICAL PROFILE</h2>
+        <span class="line"></span>
+        <span>02</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="bio">
+          <p>
+            [cite_start]I am a Computer Science Engineer at PES University[cite:
+            13, 14], focused on the intersection of hardware and cloud
+            infrastructure.
+          </p>
+          <p>
+            [cite_start]Beyond standard DevOps workflows, I explore hardware
+            hacking with Flipper Zero and Raspberry Pi[cite: 22]. [cite_start]I
+            have a background in competitive cybersecurity, ranking 31st
+            nationally in CTF challenges involving cryptography and
+            pen-testing[cite: 54].
+          </p>
+        </div>
+        <div class="stack">
+          <h4>CORE STACK</h4>
+          <ul>
+            [cite_start]
+            <li>Docker / Kubernetes [cite: 21]</li>
+            [cite_start]
+            <li>AWS (VPC, IAM, EC2) [cite: 20]</li>
+            [cite_start]
+            <li>Go / Rust / C++ [cite: 16]</li>
+            [cite_start]
+            <li>Python / Linux [cite: 16]</li>
+            [cite_start]
+            <li>PostgreSQL / Git [cite: 11, 19]</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="footer-section">
-      <div class="wrapper centered">
-        <h2 class="mega-title">SEND IT</h2>
-        <p>GOT A SERVER TO FIX? OR A CLUSTER TO DEPLOY? HIT ME UP.</p>
-        <div class="social-box">
-          <a href="mailto:amoghrrathod@gmail.com" class="retro-btn"
-            >[EMAIL_ME]</a
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-cta">
+          <p>INITIATE CONNECTION</p>
+          <a href="mailto:amoghrrathod@gmail.com" class="big-email"
+            >amoghrrathod@gmail.com</a
           >
-          <a
-            href="https://github.com/amoghrrathod"
-            target="_blank"
-            class="retro-btn"
-            >[GITHUB]</a
-          >
-          <a href="#" class="retro-btn">[LINKEDIN]</a>
         </div>
-        <p class="copyright">&copy; 2026 AMOGH RATHOD // NO RIGHTS RESERVED</p>
+        <div class="footer-links">
+          <a href="https://github.com/amoghrrathod" target="_blank">GITHUB</a>
+          <a href="#">LINKEDIN</a>
+          <a href="#" class="resume-dl">RESUME.PDF</a>
+        </div>
+        <div class="copyright">
+          [cite_start]BENGALURU, IN [cite: 1] &mdash; 2026
+        </div>
       </div>
-    </section>
+    </footer>
   </body>
 </html>
