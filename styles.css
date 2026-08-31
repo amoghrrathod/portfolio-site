@@ -7,6 +7,7 @@
   --text-main: #f4f4f5;
   --text-muted: #a1a1aa;
   --accent: #60a5fa; /* Soft Blue */
+  --accent-dim: rgba(96, 165, 250, 0.12);
   --border: #3f3f46;
 
   --font-main: "Inter", sans-serif;
@@ -15,6 +16,10 @@
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +41,27 @@ a:hover {
   color: var(--accent);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* -------------------------------------
+   SCROLL PROGRESS
+   ------------------------------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
 /* -------------------------------------
    LAYOUT
    ------------------------------------- */
@@ -52,7 +78,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: 40px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+  transition: background-color 0.3s, backdrop-filter 0.3s, padding 0.3s;
+}
+
+nav.scrolled {
+  background-color: rgba(24, 24, 27, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
@@ -67,6 +106,8 @@ nav {
   gap: 25px;
   margin: 0;
   padding: 0;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -78,11 +119,34 @@ nav {
   color: var(--accent);
 }
 
+.resume-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  padding: 7px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.resume-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 /* -------------------------------------
    HERO
    ------------------------------------- */
 .hero {
-  padding: 60px 0 80px;
+  padding: 40px 0 80px;
 }
 
 .intro-label {
@@ -93,10 +157,10 @@ nav {
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Big but not massive */
-  line-height: 1.2;
+  font-size: 2.4rem; /* Big but not massive */
+  line-height: 1.25;
   font-weight: 600;
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
   letter-spacing: -1px;
 }
 
@@ -105,6 +169,109 @@ nav {
   font-size: 1.1rem;
   max-width: 600px;
   margin-bottom: 35px;
+}
+
+/* Terminal block */
+.terminal {
+  background: #0f0f11;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  margin-bottom: 35px;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #19191c;
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red {
+  background: #ef4444;
+}
+.dot-yellow {
+  background: #eab308;
+}
+.dot-green {
+  background: #22c55e;
+}
+
+.terminal-title {
+  margin-left: 8px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.terminal-body {
+  padding: 18px 20px 22px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+.terminal-line {
+  margin: 0 0 6px 0;
+  color: var(--text-main);
+}
+
+.terminal-output {
+  margin: 0 0 16px 0;
+  color: var(--text-muted);
+}
+
+.prompt {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 22px;
+  border-radius: 8px;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn-primary:hover {
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -8px rgba(96, 165, 250, 0.5);
 }
 
 .socials {
@@ -116,6 +283,7 @@ nav {
   color: var(--text-main);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 2px;
+  font-size: 0.95rem;
 }
 
 .socials a:hover {
@@ -132,9 +300,14 @@ section {
 }
 
 .section-header {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-bottom: 40px;
   font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.section-header .prompt {
+  margin-right: 10px;
 }
 
 .grid {
@@ -153,14 +326,17 @@ section {
   background-color: var(--card-bg);
   padding: 30px;
   border-radius: 8px;
+  border: 1px solid transparent;
   transition:
     transform 0.2s,
-    background 0.2s;
+    background 0.2s,
+    border-color 0.2s;
 }
 
 .card:hover {
   transform: translateY(-3px);
   background-color: #323236; /* Slightly lighter on hover */
+  border-color: var(--accent);
 }
 
 .card-header {
@@ -179,6 +355,12 @@ section {
 .icon-link {
   color: var(--text-muted);
   font-size: 0.9rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.card:hover .icon-link {
+  color: var(--accent);
+  transform: translateX(3px);
 }
 
 .card p {
@@ -204,6 +386,86 @@ section {
 }
 
 /* -------------------------------------
+   EXPERIENCE / TIMELINE
+   ------------------------------------- */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-fill {
+  width: 100%;
+  height: 0%;
+  background: var(--accent);
+  transition: height 1.4s ease;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  transition: border-color 0.4s, background 0.4s;
+}
+
+.timeline.in-view .timeline-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin: 0 0 6px 0;
+}
+
+.timeline-content h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-company {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 14px 0;
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+}
+
+/* -------------------------------------
    ABOUT & FOOTER
    ------------------------------------- */
 .about-content p {
@@ -213,18 +475,42 @@ section {
   margin-bottom: 20px;
 }
 
-.tech-stack {
+.achievements {
+  list-style: none;
   display: flex;
-  gap: 60px;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 30px 0 10px;
+}
+
+.achievements li {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  margin-top: 45px;
 }
 
 .stack-col h4 {
   font-family: var(--font-mono);
   color: var(--text-main);
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.stack-col h4::before {
+  content: "▹ ";
+  color: var(--accent);
 }
 
 .stack-col ul {
@@ -236,13 +522,7 @@ section {
 .stack-col li {
   color: var(--text-muted);
   margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-
-.stack-col li::before {
-  content: "▹";
-  color: var(--accent);
-  margin-right: 10px;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -271,10 +551,28 @@ footer a {
    ------------------------------------- */
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
-  .tech-stack {
-    flex-direction: column;
-    gap: 30px;
+  .terminal-body {
+    font-size: 0.78rem;
+  }
+}
+
+/* -------------------------------------
+   MOTION PREFERENCES
+   ------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .cursor {
+    animation: none;
+  }
+  .timeline-fill {
+    transition: none;
+  }
+  .btn-primary:hover,
+  .card:hover {
+    transform: none;
   }
 }
