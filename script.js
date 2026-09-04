@@ -102,3 +102,42 @@ if (timeline) {
     observer.observe(timeline);
   }
 }
+
+// ---------------------------------------------
+// Resume Modal Logic
+// ---------------------------------------------
+const resumeModal = document.getElementById("resumeModal");
+const navResumeBtn = document.getElementById("navResumeBtn");
+const heroResumeBtn = document.getElementById("heroResumeBtn");
+const closeResumeModal = document.getElementById("closeResumeModal");
+
+if (resumeModal) {
+  const openModal = (e) => {
+    if (e) e.preventDefault();
+    resumeModal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    resumeModal.classList.remove("show");
+    document.body.style.overflow = "";
+  };
+
+  if (navResumeBtn) navResumeBtn.addEventListener("click", openModal);
+  if (heroResumeBtn) heroResumeBtn.addEventListener("click", openModal);
+  if (closeResumeModal) closeResumeModal.addEventListener("click", closeModal);
+
+  // Close when clicking outside modal content
+  window.addEventListener("click", (e) => {
+    if (e.target === resumeModal) {
+      closeModal();
+    }
+  });
+
+  // Close when pressing Escape key
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && resumeModal.classList.contains("show")) {
+      closeModal();
+    }
+  });
+}

@@ -41,7 +41,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="mailto:amoghrrathod@gmail.com">Contact</a></li>
         </ul>
-        <a class="resume-btn" href="Amogh_CV_crisp.pdf" download>Résumé</a>
+        <a class="resume-btn" id="navResumeBtn" href="#resume">Résumé</a>
       </nav>
 
       <header class="hero">
@@ -80,8 +80,8 @@
         </div>
 
         <div class="hero-actions">
-          <a href="Amogh_Rathod_Resume.pdf" download class="btn-primary"
-            >Download résumé</a
+          <a href="#resume" id="heroResumeBtn" class="btn-primary"
+            >View résumé</a
           >
           <div class="socials">
             <a href="https://github.com/amoghrrathod" target="_blank"
@@ -330,6 +330,38 @@
         </p>
         <div class="copyright">&copy; 2026 Amogh Rathod</div>
       </footer>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Résumé</h2>
+          <div class="modal-actions">
+            <a
+              href="Amogh_CV_crisp.pdf"
+              download
+              class="btn-primary"
+              id="downloadResumeBtn"
+            >
+              <i class="fas fa-download"></i> Download
+            </a>
+            <button
+              class="close-modal"
+              id="closeResumeModal"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <iframe
+            src="Amogh_CV_crisp.pdf#view=FitH&toolbar=0&navpanes=0"
+            title="Resume Preview"
+          ></iframe>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
